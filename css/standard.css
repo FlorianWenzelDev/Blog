@@ -1,1 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    scroll-behavior: smooth;
+    font-family: 'Palanquin';
+}
 
+header,
+footer {
+    background-color: var(--bg-color-header-footer);
+    display: flex;
+    align-items: center;
+    padding: 32px 16px;
+}
+
+header {
+    justify-content: center;
+    height: 70px;
+}
+
+header nav {
+    display: none;
+}
+
+header ul {
+    display: flex;
+    gap: 72px;
+    list-style: none;
+
+    padding-left: 0px;
+}
+
+header img,
+header a {
+    height: 56px;
+    width: 56px;
+}
+
+header a {
+    color: var(--font-color-header-footer);
+    text-decoration: none;
+
+    transition: all 250ms ease-in-out;
+}
+
+header a:hover {
+    text-decoration: underline ;
+    text-decoration-color: rgba(241, 201, 83, 1);
+    transition: all 250ms ease-in-out;
+}
+
+header a:active {
+    color: rgba(241, 201, 83, 1);
+}
+
+footer {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    color: var(--font-color-header-footer);
+}
+
+.imprint-cookies {
+    display: flex;
+    flex-direction: column;
+}
+
+.copyright-information {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.copyright-information img {
+    height: 16px;
+    width: 16px;
+}
+
+.social-media-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding-left: 0px;
+    list-style: none;
+}
+
+.social-media-links a,
+.social-media-links img {
+    height: 24px;
+    width: auto;
+    display: block;
+}
+
+
+/* Größe ist erstmal nur als dummy zu betrachten und kann später dann gemiensam auf einen Wert gelget werden */
+@media screen and (min-width: 768px) {
+
+    header {
+        padding: 0px 80px;
+        align-items: center;
+    }
+
+    header {
+        height: 128px;
+        justify-content: unset;
+        gap: 102px;
+    }
+
+    header img,
+    header a {
+        width: 72px;
+        height: 72px;
+    }
+
+    header nav {
+        display: unset;
+    }
+
+    footer {
+        padding: 60px 80px;
+        align-items: center;
+    }
+
+    .information {
+        flex-direction: row-reverse;
+        gap: 32px;
+    }
+
+    .imprint-cookies {
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    .social-media-links {
+        gap: 16px;
+    }
+
+    .social-media-links a,
+    .social-media-links img {
+        height: 32px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    header {
+        padding: 0px max(80px, calc(50% - 720px));
+    }
+
+    footer {
+        padding: 60px max(80px, calc(50% - 720px));
+    }
+
+}
