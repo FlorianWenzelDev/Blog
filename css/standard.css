@@ -7,15 +7,15 @@
 
 header,
 footer {
-    background-color: var(--bg-color-header-footer);
+    background-color: var(--primary-color-dark);
     display: flex;
     align-items: center;
-    padding: 32px 16px;
 }
 
 header {
     justify-content: center;
     height: 70px;
+    padding: 0px 16px;
 }
 
 header nav {
@@ -26,12 +26,48 @@ header ul {
     display: flex;
     gap: 72px;
     list-style: none;
-
     padding-left: 0px;
 }
 
-header img,
-header a {
+header li {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hover {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    opacity: 0;
+    z-index: 1;
+}
+
+.hover-faq {
+    background-image: url(../assets/icons/underline_faq.svg);
+    width: 100px;
+    height: 20px;
+    top: 15px;
+    left: -25px;
+}
+
+.hover-highlights {
+    background-image: url(../assets/icons/underline_highlights.svg);
+    width: 200px;
+    height: 30px;
+    top: 7px;
+    left: -45px;
+}
+
+.hover-contact {
+    background-image: url(../assets/icons/underline_contact.svg);
+    width: 100px;
+    height: 20px;
+    top: 15px;
+    left: -10px;
+}
+
+header img, .company-logo {
     height: 56px;
     width: 56px;
 }
@@ -39,23 +75,23 @@ header a {
 header a {
     color: var(--font-color-header-footer);
     text-decoration: none;
-
+    z-index: 20;
     transition: all 250ms ease-in-out;
 }
 
-header a:hover {
-    text-decoration: underline ;
-    text-decoration-color: rgba(241, 201, 83, 1);
+header a:hover~div {
     transition: all 250ms ease-in-out;
+    opacity: 1;
 }
 
 header a:active {
-    color: rgba(241, 201, 83, 1);
+    color: var(--primary-color-light);
 }
 
 footer {
     justify-content: space-between;
     align-items: flex-end;
+    padding: 32px 16px;
 }
 
 .information {
@@ -111,8 +147,7 @@ footer {
         gap: 102px;
     }
 
-    header img,
-    header a {
+    header img, .company-logo {
         width: 72px;
         height: 72px;
     }
