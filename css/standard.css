@@ -5,31 +5,35 @@
     font-family: 'Palanquin';
 }
 
-header,
+html{
+    font-size: 16px;;
+}
+
+.site-header,
 footer {
     background-color: var(--primary-color-dark);
     display: flex;
     align-items: center;
 }
 
-header {
+.site-header {
     justify-content: center;
     height: 70px;
     padding: 0px 16px;
 }
 
-header nav {
+.site-header nav {
     display: none;
 }
 
-header ul {
+.site-header ul {
     display: flex;
     gap: 72px;
     list-style: none;
     padding-left: 0px;
 }
 
-header li {
+.site-header li {
     display: flex;
     align-items: center;
     position: relative;
@@ -67,26 +71,30 @@ header li {
     left: -10px;
 }
 
-header img,
+.site-header img,
 .company-logo {
     height: 56px;
     width: 56px;
 }
 
-header a {
+.site-header a {
     color: var(--font-color-header-footer);
     text-decoration: none;
     z-index: 20;
     transition: all 250ms ease-in-out;
 }
 
-header a:hover~div {
+.site-header a:hover~div {
     transition: all 250ms ease-in-out;
     opacity: 1;
 }
 
-header a:active {
+.site-header a:active {
     color: var(--primary-color-light);
+}
+
+main{
+    padding: 32px 16px;
 }
 
 footer {
@@ -150,24 +158,24 @@ footer {
 /* Größe ist erstmal nur als dummy zu betrachten und kann später dann gemiensam auf einen Wert gelget werden */
 @media screen and (min-width: 768px) {
 
-    header {
+    .site-header {
         padding: 0px 80px;
         align-items: center;
     }
 
-    header {
+    .site-header {
         height: 128px;
         justify-content: unset;
         gap: 102px;
     }
 
-    header img,
+    .site-header img,
     .company-logo {
         width: 72px;
         height: 72px;
     }
 
-    header nav {
+    .site-header nav {
         display: unset;
     }
 
@@ -203,12 +211,16 @@ footer {
 
 @media screen and (min-width: 1440px) {
 
-    header {
+    .site-header {
         padding: 0px max(80px, calc(50% - 720px));
     }
 
     footer {
         padding: 60px max(80px, calc(50% - 720px));
+    }
+
+    main{
+        padding: 32px max(80px, calc(50% - 720px));
     }
 
 }
