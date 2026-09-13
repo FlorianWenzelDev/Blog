@@ -5,16 +5,14 @@
     font-family: 'Palanquin';
 }
 
-html{
-    font-size: 16px;;
-}
-
 .site-header,
 footer {
     background-color: var(--primary-color-dark);
     display: flex;
     align-items: center;
 }
+
+/* Header */
 
 .site-header {
     justify-content: center;
@@ -93,9 +91,114 @@ footer {
     color: var(--primary-color-light);
 }
 
+/* Article Header */
+
+.main-headline{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.main-headline h1{
+    color: var(--primary-color-light);
+    line-height: 1;
+}
+
+.main-headline h2{
+    color: var(--primary-color-dark);
+}
+
+.headline-lead{
+    color: var(--font-color-dark);
+    line-height: 1.2;
+}
+
+.article-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.article-facts li{
+    display: flex;
+    align-items: center;
+    height: 20px;
+    gap: 6px;
+}
+
+.author-introduction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--font-color-dark);
+    background-color: var(--secondary-color-dark);
+    border-radius: 16px;
+    padding: 16px 8px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.author-introduction img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;  
+    object-position: 75% 50%;
+}
+
+.author-name{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+
+}
+
+/* Main */
+
 main{
     padding: 32px 16px;
 }
+
+/* Pro tipps element */
+
+.pro-tipp-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.pro-tipp {
+    position: relative;
+    background-color: var(--secondary-color-dark);
+    border-radius: 30px;
+    padding: 24px 16px;
+}
+
+.pro-tipp-style-element {
+    position: absolute;
+    top: -70px;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    background-color: var(--primary-color-dark);
+    color: var(--primary-color-light);
+    border-radius: 16px;
+    padding: 8px 16px;
+    transform: rotate(-12deg);
+}
+
+.pro-tipp ol{
+    padding-left: 16px;
+}
+
+.pro-tipp a{
+    text-decoration: none;
+    color: var(--primary-color-dark);
+}
+
+/* Footer */
 
 footer {
     justify-content: space-between;
@@ -178,6 +281,20 @@ footer {
     .site-header nav {
         display: unset;
     }
+
+    main {
+        padding: 32px 80px;
+    }
+
+    .pro-tipp {
+        width: 80%;
+    }
+
+    .pro-tipp-style-element {
+    top: -60px;
+    left: -65px;
+    transform: rotate(-14deg);
+}
 
     footer {
         padding: 60px 80px;
