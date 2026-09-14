@@ -217,6 +217,17 @@ footer {
     flex-direction: column;
 }
 
+.imprint-cookies a{
+    text-decoration: none;
+    color: var(--font-color-header-footer);
+    transition: all 250ms ease-in-out;
+}
+
+.imprint-cookies a:hover{
+    text-decoration: underline;
+    transition: all 250ms ease-in-out;
+}
+
 .copyright-information {
     display: flex;
     gap: 6px;
