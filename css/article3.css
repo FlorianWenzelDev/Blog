@@ -1,6 +1,4 @@
-/* ==========================================
-   GLOBAL & CONTAINER FIXES
-   ========================================== */
+
 body, 
 main, 
 .article-container {
@@ -22,9 +20,6 @@ main,
     margin-bottom: 24px;
 }
 
-/* ==========================================
-   MAIN ARTICLE CONTENT & TYPOGRAPHY
-   ========================================== */
 .main-article {
     display: flex;
     flex-direction: column;
@@ -37,9 +32,7 @@ main,
     line-height: 1.2;
 }
 
-/* ==========================================
-   GRAPH CARDS & SECTIONS
-   ========================================== */
+
 .graph-section {
     display: flex;
     flex-direction: column;
@@ -109,15 +102,15 @@ main,
     justify-content: center;
     width: 100%;
     margin: 0;
-    padding: 16px; /* تصحيح: إزالة الـ padding-left القديم ليتوسط الزر تماماً */
+    padding: 16px; 
     box-sizing: border-box;
 }
 
 .share-arrow {
     position: absolute;
-    left: -10px; /* مكان السهم بالنسبة للحاوية */
-    top: -20px; /* رفع السهم للأعلى قليلاً */
-    width: 38px; /* تصغير الحجم ليطابق تصميم Figma */
+    left: -10px; 
+    top: -20px; 
+    width: 38px; 
     height: auto;
     object-fit: contain;
     pointer-events: none;
@@ -212,7 +205,7 @@ main,
     transform: translateX(-65px);
 }
 
-/* ⬇️ هاد السطر الجديد لإخفاء أيقونة Share الصفراء عند الضغط ⬇️ */
+
 .share-checkbox:checked ~ .share-btn .share-icon-inside {
     display: none;
 }
@@ -223,9 +216,7 @@ main,
     transform: translateX(0);
 }
 
-/* ==========================================
-   FOOTER (EXACT FIGMA LAYOUT + FIX FOR FIXED NAVBAR)
-   ========================================== */
+
 footer {
     display: flex !important;
     flex-direction: row !important;
@@ -235,13 +226,13 @@ footer {
     width: 100%;
     background-color: var(--primary-color-dark);
     
-    /* زيادة الـ Padding السفلي لحساب ارتفاع البار الأصفر المثبت */
+    
     padding: 30px 24px 120px 24px !important; 
     box-sizing: border-box;
     margin: 0 !important;
 }
 
-/* اليسار: نصوص الفوتر */
+
 .footer-left,
 footer > div:first-child {
     display: flex;
@@ -250,7 +241,7 @@ footer > div:first-child {
     gap: 8px;
 }
 
-/* اليمين: أيقونات التواصل الاجتماعي */
+
 .footer-socials,
 .social-icons,
 footer > div:last-child {
@@ -267,9 +258,6 @@ footer > div:last-child {
     object-fit: contain;
 }
 
-/* ==========================================
-   MOBILE NAVBAR (FIXED AT BOTTOM)
-   ========================================== */
 .mobile-navbar, 
 .navbar-bottom,
 footer.mobile-nav {
@@ -282,9 +270,7 @@ footer.mobile-nav {
     z-index: 999 !important;
 }
 
-/* ==========================================
-   MEDIA QUERIES (DESKTOP)
-   ========================================== */
+
 @media screen and (min-width: 768px) {
     .graph-card {
         padding: 48px 0px;
