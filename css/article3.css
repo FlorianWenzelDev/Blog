@@ -1,1 +1,312 @@
+/* ==========================================
+   GLOBAL & CONTAINER FIXES
+   ========================================== */
+body, 
+main, 
+.article-container {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    box-sizing: border-box;
+}
 
+.article-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.article-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* ==========================================
+   MAIN ARTICLE CONTENT & TYPOGRAPHY
+   ========================================== */
+.main-article {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.main-article p,
+.main-article li {
+    color: var(--font-color-dark);
+    line-height: 1.2;
+}
+
+/* ==========================================
+   GRAPH CARDS & SECTIONS
+   ========================================== */
+.graph-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.graph-section h2 {
+    font-family: 'Arima', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--font-color-dark);
+    text-align: center;
+    margin: 0;
+}
+
+.graph-card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.graph-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: -2px 4px 11.6px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================
+   SHARE SECTION
+   ========================================== */
+.share-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 343px;
+    margin: 40px auto 90px auto;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.share-btn-text {
+ font-family: 'Arima', sans-serif;
+}
+
+.share-section p {
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: 'Arima', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 120%;
+    color: var(--font-color-dark);
+    text-align: center;
+}
+
+.share-btn-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 16px; /* تصحيح: إزالة الـ padding-left القديم ليتوسط الزر تماماً */
+    box-sizing: border-box;
+}
+
+.share-arrow {
+    position: absolute;
+    left: -10px; /* مكان السهم بالنسبة للحاوية */
+    top: -20px; /* رفع السهم للأعلى قليلاً */
+    width: 38px; /* تصغير الحجم ليطابق تصميم Figma */
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 5;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.share-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+    height: 48px;
+    padding: 0 24px;
+    
+    background-color: var(--primary-color-dark);
+    color: var(--primary-color-light);
+    
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    
+    font-family: 'Arima', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    
+    z-index: 3;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
+}
+
+.share-btn img {
+    width: 32px;
+    height: 32px;
+}
+
+.share-btn:hover {
+    opacity: 0.9;
+}
+
+.share-menu {
+    position: absolute;
+    left: calc(50% + 10px);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-10px);
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+}
+
+.share-icon-green {
+    width: 32px;
+    height: 32px;
+}
+
+.share-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.share-links a {
+    font-family: 'Arima', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--primary-color-dark);
+    text-decoration: underline;
+}
+
+/* Animation States */
+.share-checkbox:checked ~ .share-arrow {
+    opacity: 0;
+}
+
+.share-checkbox:checked ~ .share-btn {
+    transform: translateX(-65px);
+}
+
+/* ⬇️ هاد السطر الجديد لإخفاء أيقونة Share الصفراء عند الضغط ⬇️ */
+.share-checkbox:checked ~ .share-btn .share-icon-inside {
+    display: none;
+}
+
+.share-checkbox:checked ~ .share-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+/* ==========================================
+   FOOTER (EXACT FIGMA LAYOUT + FIX FOR FIXED NAVBAR)
+   ========================================== */
+footer {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+    
+    width: 100%;
+    background-color: var(--primary-color-dark);
+    
+    /* زيادة الـ Padding السفلي لحساب ارتفاع البار الأصفر المثبت */
+    padding: 30px 24px 120px 24px !important; 
+    box-sizing: border-box;
+    margin: 0 !important;
+}
+
+/* اليسار: نصوص الفوتر */
+.footer-left,
+footer > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+/* اليمين: أيقونات التواصل الاجتماعي */
+.footer-socials,
+.social-icons,
+footer > div:last-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-icons img,
+.footer-socials img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* ==========================================
+   MOBILE NAVBAR (FIXED AT BOTTOM)
+   ========================================== */
+.mobile-navbar, 
+.navbar-bottom,
+footer.mobile-nav {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100%;
+    background-color: var(--primary-color-light);
+    z-index: 999 !important;
+}
+
+/* ==========================================
+   MEDIA QUERIES (DESKTOP)
+   ========================================== */
+@media screen and (min-width: 768px) {
+    .graph-card {
+        padding: 48px 0px;
+    }
+
+    .graph-card img {
+        width: 80%;
+        border-radius: 56px;
+    }
+
+    .author-introduction {
+        border-radius: 30px;
+        padding: 24px 32px;
+    }
+
+    footer {
+        padding: 30px 24px !important;
+    }
+
+    .mobile-navbar, 
+    .navbar-bottom,
+    footer.mobile-nav {
+        display: none !important;
+    }
+}
