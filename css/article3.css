@@ -1,9 +1,11 @@
-
+/* ==========================================
+   GENERAL RESET & BASIC STYLES
+   ========================================== */
 body, 
 main, 
 .article-container {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
+    padding-bottom: 0;
+    margin-bottom: 0;
     box-sizing: border-box;
 }
 
@@ -13,13 +15,108 @@ main,
     width: 100%;
 }
 
+/* ==========================================
+   ARTICLE HEADER & WRAPPER (MOBILE FIRST)
+   ========================================== */
 .article-header {
     display: flex;
     flex-direction: column;
-    gap: 16px;
     margin-bottom: 24px;
 }
 
+.article-header-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.article-header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.main-headline h1 {
+    font-family: 'Arima', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 120%;
+    color: var(--primary-color-light);
+    margin: 0 0 8px 0;
+}
+
+.main-headline h2 {
+    font-family: 'Arima', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    color: var(--primary-color-dark);
+    margin: 0;
+}
+
+.headline-lead {
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--font-color-dark);
+    margin: 0;
+}
+
+/* Article Facts (Date, Reading time, etc.) */
+.article-facts {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.article-facts li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--font-color-dark);
+}
+
+.article-facts img {
+    width: 18px;
+    height: 18px;
+}
+
+/* Author Introduction Card */
+.author-introduction {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.author-introduction img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-name h3 {
+    margin: 0;
+    font-family: 'Arima', sans-serif;
+    font-size: 18px;
+    color: var(--font-color-dark);
+}
+
+.author-name p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--primary-color-dark);
+}
+
+/* ==========================================
+   MAIN ARTICLE CONTENT
+   ========================================== */
 .main-article {
     display: flex;
     flex-direction: column;
@@ -29,9 +126,8 @@ main,
 .main-article p,
 .main-article li {
     color: var(--font-color-dark);
-    line-height: 1.2;
+    line-height: 1.5;
 }
-
 
 .graph-section {
     display: flex;
@@ -81,12 +177,11 @@ main,
 }
 
 .share-btn-text {
- font-family: 'Arima', sans-serif;
+    font-family: 'Arima', sans-serif;
 }
 
 .share-section p {
-    margin: 0;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
     font-family: 'Arima', sans-serif;
     font-size: 18px;
     font-weight: 500;
@@ -131,24 +226,19 @@ main,
     align-items: center;
     justify-content: center;
     gap: 10px;
-    
     height: 48px;
     padding: 0 24px;
-    
     background-color: var(--primary-color-dark);
     color: var(--primary-color-light);
-    
     border: none;
     border-radius: 40px;
     cursor: pointer;
-    
     font-family: 'Arima', sans-serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 120%;
     letter-spacing: 0.05em;
     white-space: nowrap;
-    
     z-index: 3;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
 }
@@ -168,7 +258,6 @@ main,
     display: flex;
     align-items: center;
     gap: 12px;
-    
     opacity: 0;
     pointer-events: none;
     transform: translateX(-10px);
@@ -199,12 +288,12 @@ main,
 /* Animation States */
 .share-checkbox:checked ~ .share-arrow {
     opacity: 0;
+    visibility: hidden;
 }
 
 .share-checkbox:checked ~ .share-btn {
     transform: translateX(-65px);
 }
-
 
 .share-checkbox:checked ~ .share-btn .share-icon-inside {
     display: none;
@@ -216,83 +305,40 @@ main,
     transform: translateX(0);
 }
 
-
-footer {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: flex-end !important;
-    
-    width: 100%;
-    background-color: var(--primary-color-dark);
-    
-    
-    padding: 30px 24px 120px 24px !important; 
-    box-sizing: border-box;
-    margin: 0 !important;
-}
-
-
-.footer-left,
-footer > div:first-child {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-
-.footer-socials,
-.social-icons,
-footer > div:last-child {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-}
-
-.social-icons img,
-.footer-socials img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-}
-
-.mobile-navbar, 
-.navbar-bottom,
-footer.mobile-nav {
-    position: fixed !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100%;
-    background-color: var(--primary-color-light);
-    z-index: 999 !important;
-}
-
-
+/* ==========================================
+   MEDIA QUERIES (DESKTOP & TABLET RESPONSIVE)
+   ========================================== */
 @media screen and (min-width: 768px) {
+    
+    /* جعل العناوين وكرت الكاتب جنب بعض للشاشات الكبيرة */
+    .article-header-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .article-header-content {
+        flex: 1;
+    }
+
+    .author-introduction {
+        width: 320px;
+        flex-shrink: 0;
+        border-radius: 30px;
+        padding: 24px 32px;
+    }
+
+    .main-headline h1 {
+        font-size: 36px;
+    }
+
     .graph-card {
-        padding: 48px 0px;
+        padding: 24px 0px;
     }
 
     .graph-card img {
         width: 80%;
         border-radius: 56px;
-    }
-
-    .author-introduction {
-        border-radius: 30px;
-        padding: 24px 32px;
-    }
-
-    footer {
-        padding: 30px 24px !important;
-    }
-
-    .mobile-navbar, 
-    .navbar-bottom,
-    footer.mobile-nav {
-        display: none !important;
     }
 }

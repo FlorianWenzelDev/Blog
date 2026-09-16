@@ -8,7 +8,6 @@
     <title>Travel Blog - Pattaya Pulse</title>
     <link rel="shortcut icon" href="./assets/icons/logo.svg" type="image/x-icon">
 
-    
     <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/standard.css">
@@ -16,7 +15,7 @@
 </head>
 
 <body>
-   
+
     <header class="site-header">
         <a class="company-logo" href="index.html">
             <img src="./assets/icons/logo.svg" alt="Firmenlogo Travelblog">
@@ -39,55 +38,59 @@
         </nav>
     </header>
 
-
     <main>
         <article class="article-container">
             
-           
             <header class="article-header">
-                <div class="main-headline">
-                    <h1>Pattaya Pulse: Food, Sun and Neon Nights</h1>
-                    <h2>Thailand's City That Never Sleeps</h2>
-                </div>
-                
-                <p class="headline-lead">
-                    From bustling promenades to nearby islands, the city offers an energetic and diverse escape. Discover Pattaya City, with vibrant nightlife and rich cultural landmarks.
-                </p>
+                <!-- Wrapper لتجميع المحتوى وتسهيل ترتيبه بالـ CSS (Flexbox / Grid) -->
+                <div class="article-header-wrapper">
+                    
+                    <!-- الجزء الأيسر: العناوين، الوصف، والبيانات -->
+                    <div class="article-header-content">
+                        <div class="main-headline">
+                            <h1>Pattaya Pulse: Food, Sun and Neon Nights</h1>
+                            <h2>Thailand's City That Never Sleeps</h2>
+                        </div>
+                        
+                        <p class="headline-lead">
+                            From bustling promenades to nearby islands, the city offers an energetic and diverse escape. Discover Pattaya City, with vibrant nightlife and rich cultural landmarks.
+                        </p>
 
-              
-                <ul class="article-facts">
-                    <li>
-                        <img src="./assets/icons/calendar_month.svg" alt="Calendar">
-                        <span>Date: 02.04.2026</span>
-                    </li>
-                    <li>
-                        <img src="./assets/icons/eyeglasses_2.svg" alt="Reading time">
-                        <span>Reading time: 7 min.</span>
-                    </li>
-                    <li>
-                        <img src="./assets/icons/visibility.svg" alt="Views">
-                        <span>Read: 46</span>
-                    </li>
-                    <li>
-                        <img src="./assets/icons/share_green.svg" alt="Shares">
-                        <span>Shared: 23</span>
-                    </li>
-                </ul>
-
-                
-                <div class="author-introduction">
-                    <img src="./assets/img/690fbef0c17eec1970205dee7813ecf3e1ca60ca.jpg" alt="Tamara Walker">
-                    <div class="author-name">
-                        <h3>Tamara Walker</h3>
-                        <p>Author</p>
+                        <ul class="article-facts">
+                            <li>
+                                <img src="./assets/icons/calendar_month.svg" alt="Calendar">
+                                <span>Date: 02.04.2026</span>
+                            </li>
+                            <li>
+                                <img src="./assets/icons/eyeglasses_2.svg" alt="Reading time">
+                                <span>Reading time: 7 min.</span>
+                            </li>
+                            <li>
+                                <img src="./assets/icons/visibility.svg" alt="Views">
+                                <span>Read: 46</span>
+                            </li>
+                            <li>
+                                <img src="./assets/icons/share_green.svg" alt="Shares">
+                                <span>Shared: 23</span>
+                            </li>
+                        </ul>
                     </div>
-                    <p>
-                        I've been traveling since 2017, chasing moments instead of plans. I'm fascinated by snakes, love sharks, would happily spend weeks deep in the jungle, and can never get enough papaya. As long as there's a next destination, I know I'm exactly where I'm meant to be.
-                    </p>
+
+                    <!-- الجزء الأيمن: بطاقة التعريف بالكاتب -->
+                    <div class="author-introduction">
+                        <img src="./assets/img/690fbef0c17eec1970205dee7813ecf3e1ca60ca.jpg" alt="Tamara Walker">
+                        <div class="author-name">
+                            <h3>Tamara Walker</h3>
+                            <p>Author</p>
+                        </div>
+                        <p>
+                            I've been traveling since 2017, chasing moments instead of plans. I'm fascinated by snakes, love sharks, would happily spend weeks deep in the jungle, and can never get enough papaya. As long as there's a next destination, I know I'm exactly where I'm meant to be.
+                        </p>
+                    </div>
+
                 </div>
             </header>
                 
-            
             <div class="main-article">
 
                 <p>
@@ -130,20 +133,15 @@
                     Egestas a enim vestibulum malesuada. Ante in commodo porta scelerisque turpis gravida semper. Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta scelerisque turpis gravida semper. Lorem ipsum dolor sit ameta enim vestibulum malesuada. Antenes intrew commodo porta scelerisque turpis. ipsum dolor sit ametert consectetur. Egestas a enim vestibulum malesuada. Ante in comm odo porta scelerisque turpis gravida semper.
                 </p>
 
-                <!-- ========================================== -->
-                <!-- START: Share Section (PURE CSS ANIMATION) -->
-
+                <!-- START: Share Section -->
                 <div class="share-section">
                     <p>Follow me for more content like this, and share the article with your friends!</p>
                     
                     <div class="share-btn-wrapper">
-                     
                         <img src="./assets/icons/pfeil mobile.svg" alt="" class="share-arrow">
 
-                       
                         <input type="checkbox" id="share-toggle" class="share-checkbox">
 
-                        
                         <label for="share-toggle" class="share-btn">
                             <img src="./assets/icons/share.svg" alt="Share Icon" class="share-icon-inside">
                             <span class="share-btn-text">Share</span>
@@ -158,8 +156,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- END: Share Section                         -->
-                <!-- ========================================== -->
+                <!-- END: Share Section -->
 
             </div>
 
