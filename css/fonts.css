@@ -73,12 +73,15 @@ html {
   font-weight: 700;
 }
 
+/* Unterseiten */
+
 .site-header a {
   font-family: "Arima";
   font-size: 1.5rem;
 }
 
-.main-headline h1 {
+.main-headline h1,
+.landingpage-headline h2 {
   font-family: "Arima";
   font-size: 2.5rem;
   font-weight: 700;
@@ -115,8 +118,13 @@ html {
 @media screen and (min-width: 768px) {
 
   .main-article p,
-.main-article li,
-.pro-tipp li {
-  font-size: 1.5rem;
-}
+  .main-article li,
+  .pro-tipp li {
+    font-size: 1.5rem;
+  }
+
+  .landingpage-headline h2 {
+    font-size: 3.25rem;
+  }
+
 }
