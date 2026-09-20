@@ -1,0 +1,40 @@
+.hero-section {
+    position: relative;
+    height: 580px;
+}
+
+.hero-section img {
+    position: absolute;
+    width: 100%;
+    height: 580px;
+}
+
+
+.main-landingpage section{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 120px;
+}
+
+.landingpage-headline {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+    color: var(--primary-color-dark);
+}
+
+.landingpage-headline img {
+    width: 30px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    .landingpage-headline img {
+        width: 40px;
+    }
+
+}
