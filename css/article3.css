@@ -43,7 +43,7 @@
 .main-headline h2 {
     margin: 0;
 
-    font-family: 'Arima', sans-serif;
+    
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2;
@@ -161,10 +161,6 @@
 }
 
 
-/* ==========================================
-   MAIN ARTICLE
-   ========================================== */
-
 .main-article {
     width: 100%;
 
@@ -202,7 +198,7 @@
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2;
-
+    padding-bottom: 24px;
     text-align: center;
 
     color: var(--font-color-dark);
@@ -222,10 +218,10 @@
 
 .graph-card {
     width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 24px;
 }
 
 .graph-card img {
@@ -274,7 +270,8 @@
 
     text-align: center;
 
-    position: relative;
+   position: relative;
+    z-index: 0;
 }
 
 .share-section > p {
@@ -576,6 +573,7 @@
 
     .graph-section h2 {
         font-size: 25px;
+        padding: 24px;
     }
 
     .graph-section p {
@@ -585,7 +583,7 @@
 
 
     .graph-section-large .graph-card {
-        padding: 8px 0;
+        padding: 24px 0;
     }
 
     .graph-section-large .graph-card img {
@@ -594,20 +592,23 @@
 
         border-radius: 48px;
     }
+    
 
 
     .desktop-graph-row {
+        display: flex;
         flex-direction: row;
-
-        align-items: flex-start;
-
+        align-items: stretch;
         gap: 60px;
     }
 
     .graph-section-half {
+        
         flex: 1;
-
         min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .graph-section-half h2 {
@@ -615,12 +616,13 @@
     }
 
     .graph-section-half .graph-card {
-        margin-top: 4px;
+        margin-top: 24px;
     }
 
     .graph-section-half .graph-card img {
         width: 100%;
-
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
         border-radius: 40px;
     }
 
@@ -666,10 +668,22 @@
     }
 
     .desktop-graph-row {
-        gap: 64px;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch; 
+        gap: 60px;
     }
+    
 
     .graph-section-half {
-        padding: 0 30px;
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+    }
+
+    .graph-section-half .graph-card {
+        margin-top: auto;
     }
 }
