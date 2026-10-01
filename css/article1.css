@@ -1,1 +1,45 @@
+/* SLIDER */
 
+.top-destinations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top-destinations h3 {
+    font-family: 'Arima', sans-serif;
+    font-weight: 600;
+    line-height: 120%;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--font-color-dark);
+}
+
+.destinations-slider {
+    display: flex;
+    justify-content: center;
+    height: clamp(25dvh, 440px, 500px);
+}
+
+.destinations-slider div {
+    width: 20%;
+    background-color: red;
+    transform: perspective(250px) rotateY(10deg) translateX(-20px);
+    transform-origin: 50% 50%;
+    box-shadow: 0px 12px 24px rgba(3, 7, 18, 0.25);
+    transition: transform 255ms ease-in-out;
+    border-radius: 16px;
+}
+
+.destinations-slider div:not(:first-child) {
+    margin-left: -20px;
+}
+
+.destinations-slider div:hover {
+    transform: perspective(250px) rotateY(0) translateX(0) scaleX(1.2) scaleY(1.2);
+    z-index: 2;
+}
+
+.destinations-slider div:hover~.slider-element {
+    transform: perspective(250px) rotateY(-10deg) translateX(20px);
+}
