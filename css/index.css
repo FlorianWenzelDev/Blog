@@ -337,6 +337,8 @@ details[open] img {
     margin: 0 auto;
 }
 
+
+
 .input-group {
     display: flex;
     flex-direction: column;
@@ -528,8 +530,10 @@ details[open] img {
     }
 
 }
-
-
+.contact-subtext {
+    display: none;
+  }
+  
 @media screen and (min-width: 768px) {
 
     .landingpage-headline img {
@@ -596,6 +600,17 @@ details[open] img {
         animation: text-rotation 10s linear 4.5s infinite forwards;
     }
 
+    .contact-subtext {
+    font-family: 'Palanquin', sans-serif;
+    display: block; 
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--font-color-dark);
+    margin-top: -16px;
+    margin-bottom: 24px;
+    line-height: 110%;
+}
     .contact-form {
         max-width: 1100px;
         display: grid;
