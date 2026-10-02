@@ -600,6 +600,17 @@ details[open] img {
         animation: text-rotation 10s linear 4.5s infinite forwards;
     }
 
+    .highlights-slider {
+        max-width: 1100px;
+    }
+
+    .faq-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1100px;
+    }
+
     .contact-subtext {
     font-family: 'Palanquin', sans-serif;
     display: block; 
