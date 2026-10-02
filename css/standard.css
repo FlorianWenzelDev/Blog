@@ -95,23 +95,27 @@ footer {
 
 /* Article Header */
 
-.main-headline{
+.main-headline {
     display: flex;
     flex-direction: column-reverse;
+    padding-bottom: 8px;
+    gap: 8px;
 }
 
-.main-headline h1{
+.main-headline h1 {
     color: var(--primary-color-light);
     line-height: 1;
 }
 
-.main-headline h2{
+.main-headline h2 {
     color: var(--primary-color-dark);
+    line-height: 1;
 }
 
-.headline-lead{
+.headline-lead {
     color: var(--font-color-dark);
     line-height: 1.2;
+    padding-bottom: 24px;
 }
 
 .article-facts {
@@ -120,16 +124,17 @@ footer {
     gap: 4px 16px;
     list-style-type: none;
     padding-left: 0px;
+    padding-bottom: 24px;
 }
 
-.article-facts li{
+.article-facts li {
     display: flex;
     align-items: center;
     height: 20px;
     gap: 6px;
 }
 
-.author-introduction{
+.author-introduction {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,28 +142,32 @@ footer {
     background-color: var(--secondary-color-dark);
     border-radius: 16px;
     padding: 16px 8px;
+    margin-bottom: 24px;
     text-align: center;
     line-height: 1.2;
 }
 
-.author-introduction img{
+.author-introduction img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    object-fit: cover;  
+    object-fit: cover;
     object-position: 75% 50%;
 }
 
-.author-name{
+.author-introduction p{
+    line-height: 1.2;
+}
+
+.author-name {
     display: flex;
     flex-direction: column;
     padding: 16px;
-
 }
 
 /* Main */
 
-main{
+main {
     padding: 32px 16px;
 }
 
@@ -191,11 +200,11 @@ main{
     transform: rotate(-12deg);
 }
 
-.pro-tipp ol{
+.pro-tipp ol {
     padding-left: 16px;
 }
 
-.pro-tipp a{
+.pro-tipp a {
     text-decoration: none;
     color: var(--primary-color-dark);
 }
@@ -219,13 +228,13 @@ footer {
     flex-direction: column;
 }
 
-.imprint-cookies a{
+.imprint-cookies a {
     text-decoration: none;
     color: var(--font-color-header-footer);
     transition: all 250ms ease-in-out;
 }
 
-.imprint-cookies a:hover{
+.imprint-cookies a:hover {
     text-decoration: underline;
     transition: all 250ms ease-in-out;
 }
@@ -280,9 +289,7 @@ footer {
     background-color: var(--primary-color-light);
 }
 
-/* ==========================================
-   SHARE SECTION
-   ========================================== */
+/* SHARE SECTION */
 
 .share-section {
     display: flex;
@@ -299,8 +306,6 @@ footer {
 .share-section p {
     margin: 0;
     margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: 500;
     line-height: 1.2;
     color: var(--font-color-dark);
     text-align: center;
@@ -346,8 +351,6 @@ footer {
     border: none;
     border-radius: 40px;
     cursor: pointer;
-    font-size: 24px;
-    font-weight: 700;
     line-height: 1.2;
     white-space: nowrap;
     z-index: 3;
@@ -389,30 +392,26 @@ footer {
 }
 
 .share-links a {
-    font-weight: 600;
-    font-size: 18px;
     color: var(--primary-color-dark);
     text-decoration: underline;
 }
 
-/* ==========================================
-   SHARE BOX ANIMATION STATES 
-   ========================================== */
+/* SHARE BOX ANIMATION STATES */
 
-.share-checkbox:checked ~ .share-arrow {
+.share-checkbox:checked~.share-arrow {
     opacity: 0 !important;
     visibility: hidden !important;
 }
 
-.share-checkbox:checked ~ .share-btn {
+.share-checkbox:checked~.share-btn {
     transform: translateX(-65px);
 }
 
-.share-checkbox:checked ~ .share-btn .share-icon-inside {
+.share-checkbox:checked~.share-btn .share-icon-inside {
     display: none !important;
 }
 
-.share-checkbox:checked ~ .share-menu {
+.share-checkbox:checked~.share-menu {
     opacity: 1;
     pointer-events: auto;
     transform: translateX(0);
@@ -451,10 +450,10 @@ footer {
     }
 
     .pro-tipp-style-element {
-    top: -60px;
-    left: -65px;
-    transform: rotate(-14deg);
-}
+        top: -60px;
+        left: -65px;
+        transform: rotate(-14deg);
+    }
 
     footer {
         padding: 60px 80px;
@@ -484,6 +483,44 @@ footer {
     .mobile-navbar {
         display: none;
     }
+
+    .share-arrow {
+        content: url('../assets/icons/Pfeil_Desktop.svg');
+        width: 95px;
+        height: auto;
+        left: -40px;
+        top: -25px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .headline-lead {
+        padding-bottom: 40px;
+    }
+    
+    .article-introduction{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 8px;
+        padding-bottom: 24px;
+    }
+
+    .article-facts{
+        padding-bottom: 0px;
+    }
+
+    .author-introduction{
+        width: 100%;
+        max-width: 260px;
+        margin-bottom: unset;
+        padding: 16px;
+    }
+
+    .author-introduction > p{
+        text-align: left;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -496,8 +533,7 @@ footer {
         padding: 60px max(80px, calc(50% - 720px));
     }
 
-    main{
+    main {
         padding: 32px max(80px, calc(50% - 720px));
     }
-
 }
