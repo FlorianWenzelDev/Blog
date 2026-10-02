@@ -175,7 +175,7 @@
     align-items: flex-end;
     position: relative;
     width: 100%;
-    height: clamp(25dvh, 35dvh, 650px);
+    height: 533px;
     border-top-right-radius: 100px;
     overflow: hidden;
     margin-top: 30px;
