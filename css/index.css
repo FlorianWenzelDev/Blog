@@ -243,6 +243,7 @@
 }
 
 .slider-content-element {
+    min-width: 0;
     flex: 0 0 25%;
     background-size: cover;
     background-position: center;
