@@ -213,6 +213,10 @@ html {
   .graph-section-half h2 {
     font-size: 2rem;
   }
+
+  .share-section p {
+    font-size: 1.5rem;
+}
 }
 
 @media screen and (min-width: 1024px) {

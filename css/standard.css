@@ -155,7 +155,7 @@ footer {
     object-position: 75% 50%;
 }
 
-.author-introduction p{
+.author-introduction p {
     line-height: 1.2;
 }
 
@@ -177,6 +177,7 @@ main {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-bottom: 32px;
 }
 
 .pro-tipp {
@@ -445,6 +446,10 @@ footer {
         padding: 32px 80px;
     }
 
+    .pro-tipp-wrapper {
+        margin-bottom: 50px;
+    }
+
     .pro-tipp {
         width: 80%;
     }
@@ -484,6 +489,12 @@ footer {
         display: none;
     }
 
+    .share-section {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        max-width: 450px;
+    }
+
     .share-arrow {
         content: url('../assets/icons/Pfeil_Desktop.svg');
         width: 95px;
@@ -494,12 +505,12 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-    
+
     .headline-lead {
         padding-bottom: 40px;
     }
-    
-    .article-introduction{
+
+    .article-introduction {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -507,18 +518,18 @@ footer {
         padding-bottom: 24px;
     }
 
-    .article-facts{
+    .article-facts {
         padding-bottom: 0px;
     }
 
-    .author-introduction{
+    .author-introduction {
         width: 100%;
         max-width: 260px;
         margin-bottom: unset;
         padding: 16px;
     }
 
-    .author-introduction > p{
+    .author-introduction>p {
         text-align: left;
     }
 }
